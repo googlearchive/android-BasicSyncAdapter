@@ -1,4 +1,1 @@
-
-
-
-include 'BasicSyncAdapterSample'
+include 'Application'
