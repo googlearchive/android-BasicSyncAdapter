@@ -1,8 +1,8 @@
 Android BasicSyncAdapter Sample
-==============================
+===================================
 
 This sample demonstrates using SyncAdapter to fetch background data for an app that
-doesn\'t require a user-visible account type or 2-way synchronization.
+doesn't require a user-visible account type or 2-way synchronization.
 
 
 This sample periodically downloads the feed from the Android Developer Blog and
@@ -12,8 +12,8 @@ inside a ListView.
 Pre-requisites
 --------------
 
-- Android SDK v20
-- Android Build Tools v20
+- Android SDK v21
+- Android Build Tools v21.1.1
 - Android Support Repository
 
 Getting Started
@@ -46,7 +46,7 @@ file to you under the Apache License, Version 2.0 (the "License"); you may not
 use this file except in compliance with the License.  You may obtain a copy of
 the License at
 
-  http://www.apache.org/licenses/LICENSE-2.0
+http://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
