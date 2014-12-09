@@ -5,8 +5,17 @@
 ---
 status:       PUBLISHED
 technologies: [Android]
-categories:   [Connectivity]
+categories:   [Background, Connectivity]
 languages:    [Java]
 solutions:    [Mobile]
 github:       android-BasicSyncAdapter
+level:        INTERMEDIATE
+icon:         screenshots/icon-web.png
+apiRefs:
+    - android:android.app.Service
+    - android:android.content.AbstractThreadedSyncAdapter
+    - android:android.content.ContentProvider
+    - android:android.content.ContentResolver
+    - android:android.content.SyncResult
+    - android:android.database.sqlite.SQLiteDatabase
 license: apache2
