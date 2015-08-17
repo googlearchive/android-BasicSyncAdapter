@@ -28,8 +28,8 @@ For more on SyncAdapters refer to [Transferring Data Using Sync Adapters][1]
 Pre-requisites
 --------------
 
-- Android SDK v22
-- Android Build Tools v22.0.1
+- Android SDK v23
+- Android Build Tools v23.0.0
 - Android Support Repository
 
 Screenshots
