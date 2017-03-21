@@ -17,29 +17,30 @@ package com.example.android.basicsyncadapter.tests;
 
 import com.example.android.basicsyncadapter.*;
 
-import android.test.ActivityInstrumentationTestCase2;
+import android.support.test.rule.ActivityTestRule;
+import android.support.test.runner.AndroidJUnit4;
+
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Rule;
+import org.junit.Test;
+import org.junit.runner.RunWith;
 
 /**
 * Tests for BasicSyncAdapter sample.
 */
-public class SampleTests extends ActivityInstrumentationTestCase2<EntryListActivity> {
+@RunWith(AndroidJUnit4.class)
+public class SampleTests {
+    @Rule
+    public ActivityTestRule<EntryListActivity> mActivityRule = new ActivityTestRule<>(EntryListActivity.class);
 
     private EntryListActivity mTestActivity;
     private EntryListFragment mTestFragment;
 
-    public SampleTests() {
-        super(EntryListActivity.class);
-    }
 
-    @Override
-    protected void setUp() throws Exception {
-        super.setUp();
-
-        // Starts the activity under test using the default Intent with:
-        // action = {@link Intent#ACTION_MAIN}
-        // flags = {@link Intent#FLAG_ACTIVITY_NEW_TASK}
-        // All other fields are null or empty.
-        mTestActivity = getActivity();
+    @Before
+    public void setUp() throws Exception {
+        mTestActivity = mActivityRule.getActivity();
         mTestFragment = (EntryListFragment)
             mTestActivity.getSupportFragmentManager().getFragments().get(0);
     }
@@ -47,11 +48,10 @@ public class SampleTests extends ActivityInstrumentationTestCase2<EntryListActiv
     /**
     * Test if the test fixture has been set up correctly.
     */
+    @Test
     public void testPreconditions() {
-        //Try to add a message to add context to your assertions. These messages will be shown if
-        //a tests fails and make it easy to understand why a test failed
-        assertNotNull("mTestActivity is null", mTestActivity);
-        assertNotNull("mTestFragment is null", mTestFragment);
+        Assert.assertNotNull("mTestActivity is null", mTestActivity);
+        Assert.assertNotNull("mTestFragment is null", mTestFragment);
     }
 
     /**
