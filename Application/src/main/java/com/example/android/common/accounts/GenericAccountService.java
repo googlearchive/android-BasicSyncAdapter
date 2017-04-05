@@ -87,14 +87,14 @@ public class GenericAccountService extends Service {
         public Bundle addAccount(AccountAuthenticatorResponse accountAuthenticatorResponse,
                                  String s, String s2, String[] strings, Bundle bundle)
                 throws NetworkErrorException {
-            return null;
+            throw new UnsupportedOperationException();
         }
 
         @Override
         public Bundle confirmCredentials(AccountAuthenticatorResponse accountAuthenticatorResponse,
                                          Account account, Bundle bundle)
                 throws NetworkErrorException {
-            return null;
+            throw new UnsupportedOperationException();
         }
 
         @Override
