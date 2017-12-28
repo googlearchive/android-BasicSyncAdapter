@@ -145,7 +145,7 @@ public class EntryListFragment extends ListFragment
         super.onAttach(activity);
 
         // Create account, if needed
-        SyncUtils.CreateSyncAccount(activity);
+        SyncUtils.createSyncAccount(activity);
     }
 
     @Override
@@ -258,7 +258,7 @@ public class EntryListFragment extends ListFragment
         switch (item.getItemId()) {
             // If the user clicks the "Refresh" button.
             case R.id.menu_refresh:
-                SyncUtils.TriggerRefresh();
+                SyncUtils.triggerRefresh();
                 return true;
         }
         return super.onOptionsItemSelected(item);
@@ -331,11 +331,11 @@ public class EntryListFragment extends ListFragment
                 @Override
                 public void run() {
                     // Create a handle to the account that was created by
-                    // SyncService.CreateSyncAccount(). This will be used to query the system to
+                    // SyncService.createSyncAccount(). This will be used to query the system to
                     // see how the sync status has changed.
-                    Account account = GenericAccountService.GetAccount(SyncUtils.ACCOUNT_TYPE);
+                    Account account = GenericAccountService.getAccount(SyncUtils.ACCOUNT_TYPE);
                     if (account == null) {
-                        // GetAccount() returned an invalid value. This shouldn't happen, but
+                        // getAccount() returned an invalid value. This shouldn't happen, but
                         // we'll set the status to "not refreshing".
                         setRefreshActionButtonState(false);
                         return;
